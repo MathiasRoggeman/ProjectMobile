@@ -1,0 +1,36 @@
+.ion-content {
+  background: url('../img/background_chalkboard_smartphone.png') no-repeat center;
+  background-size: cover;
+}
+
+.center-form {
+    width: 290px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.center-form label {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-color: rgba(255, 255, 255, 0);
+}
+.center-form label.top-input {
+    border-radius: 4px 4px 0px 0px !important;
+}
+.center-form label.bottom-input {
+    border-radius: 0px 0px 4px 4px !important;
+}
+
+.logo {
+    height: 150px; 
+}
+.text-center img {
+    height: 72px;
+}
+ 
+
+bar.bar-custom, bar.bar-custom .bar.bar-positive, .bar-custom .nav-bar-block ion-header-bar {
+		border-color: #FF7148;
+		background-color: #FF7148;
+		background-image: linear-gradient(0deg, #FF7148, #FF7148 50%, transparent 50%);
+	}

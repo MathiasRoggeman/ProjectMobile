@@ -1,0 +1,33 @@
+<ion-view title="Login" hide-nav-bar="true" cache-view="false" nav-transition="none" id="login">
+  <ion-content background padding="true" class="manual-ios-statusbar-padding ion-content" scroll="false">
+ <img src="img/background_chalk.png" style="display: block; width: 100%; height: auto; margin-left: auto; margin-right: auto;">
+      <spacer type="vertical" size=16px> </spacer>
+    <form id="loginForm" class="list center-form" ng-submit="Login()" ng-controller="LoginCtrl" novalidate>
+
+        
+        <img src="img/gingerkleur.png" class="logo"/>
+
+        <spacer type="vertical" size=16px> </spacer>
+
+        <ion-list id="user-details">
+          <label class="item item-input top-input">
+            <input id="mail"  type="text"  name="mail" ng-model="mail" placeholder="mail" required>
+          </label>
+
+
+          <label class="item item-input bottom-input">
+            <input  id="password" type="password" name="password" ng-model="password" placeholder="password" required>
+          </label>
+        </ion-list>
+
+
+        <spacer type="vertical" size=16px> </spacer>
+
+        <input id="submit" type="submit"  value="Log in" class="button button-stable  button-block" />
+
+
+        <a id="register" href="#/register"  class="button button-positive  button-block button-clear">Or create an account</a>
+      </form>
+
+  </ion-content>
+</ion-view>

@@ -1,0 +1,26 @@
+<ion-view view-title="Scanned Your Juice">
+    <ion-content padding="true" class="manual-ios-statusbar-padding">
+        <div class="spacer" style="width: 300px; height: 31px;"></div>
+        <div style="text-align:center;" class="show-list-numbers-and-dots">
+            <p><strong>Nice one!</strong></p>
+            <p>The "{{juice.Name }}" has been added to your dashboard</p>
+        </div>
+        <img src="{{pictureURL}}" width="300">
+
+        <a href="#/app/dashboard" class="button button-dark button-block">Go to dashboard</a>
+
+        
+        <div>
+            <button class="button button-dark button-block button-clear icon-left ion-social-facebook">Share your last shot on Facebook</button>
+        </div>
+       
+        <div style="text-align:center;" class="show-list-numbers-and-dots">
+            <p><strong>What did you think after finishing this one?</strong></p>
+        </div>
+
+     
+        <button class="button button-balanced">Yummy!</button>
+        <button class="button button-positive" style="left: 12%;">Meh</button>
+        <button class="button button-assertive" style="left: 25%;">Just no!</button>
+    </ion-content>
+</ion-view>

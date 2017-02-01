@@ -1,0 +1,32 @@
+<ion-view id="main-background" view-title="Dashboard"  class="container">
+  <ion-content scroll="false">
+    <div id="main">
+
+      <center>
+        <h3 style='margin-top: 15px;' ng-hide="toggle">Ingredients</h3>
+        <h3 style='margin-top: 15px;' ng-show="toggle">Nutrients</h3>
+   
+        <canvas id="HorizontalBar" ng-hide="toggle" class="chart chart-horizontalBar" chart-data="dataIngredients" chart-labels="labelsIngredients"></canvas>
+        <canvas id="HorizontalBar2" ng-show="toggle" class="chart chart-horizontalBar" chart-data="dataNutrients" chart-labels="labelsNutrients"></canvas>
+
+ <ionic-datepicker ng-click="DatePickerStart()">
+          <button id="dateBtn1" class="button button-block button-stable" class="wrapper" >From: {{startDate | date:'yyyy/MM/dd'}}</button>
+        </ionic-datepicker>
+        <ionic-datepicker ng-click="DatePickerEnd()">
+          <button id="dateBtn2" class="button button-block button-stable" class="wrapper" >Until: {{endDate | date:'yyyy/MM/dd'}}</button>
+        </ionic-datepicker>
+        <br/>
+        <br/>
+        <br/>
+
+        <button id="scanbtn" ng-click="toggle=!toggle;" class="button button-stable  button-block" >
+          <span ng-show="toggle"> Ingredient</span>
+          <span ng-hide="toggle">Nutriënts</span>
+        </button>
+
+       
+
+      </center>
+    </div>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,48 @@
+<ion-view view-title="Scan your juice">
+  <ion-content>
+   <br/>
+   <br/>
+
+    <div class="text-center" style="padding-top: 60px;">
+      <h3>{{juice.Name }}</h3>
+
+
+      <img src="{{pictureURL}}">
+    
+        <div>
+          
+          Your juice contains:
+          
+          </br>
+          </br>
+
+          <div ng-repeat="ingredient in ingredients">
+            {{ingredient.Ingredient.Amount_g}} g of {{ingredient.Ingredient.Name}}
+          </div>
+
+        </br>Total of:</br></br>
+          <div ng-repeat="nutrient in nutrients">
+            <div ng-bind-html="nutrient.Nutrient.Amount_html"></div>
+            of {{nutrient.Nutrient.Name}}, which results in a daily reference intake of {{Math.round(nutrient.Nutrient.PartOfRI * 100)}}%
+          </div>
+        </div>
+      </div>
+
+        
+        <div ng-if="$rootScope.isLoggedIn()">
+            <div class="button button-balanced button-block">Add to dashboard</div>
+        </div>
+
+        <div ng-if="!($rootScope.isLoggedIn())">
+        
+            <a href="#/login" class="button button-stable  button-block">Login</a>
+       
+        </div>
+        <button class="button"  class="button button-stable  button-block" ng-click="scanBarcode()">Scan Juice</button>
+    </div>
+  </ion-content>
+
+  <div class="bar bar-footer bar-stable">
+  
+  </div>
+</ion-view>
